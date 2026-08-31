@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+chromadb
+langchain
+langchain-community
+langchain-core
+langgraph
+langgraph-checkpoint-sqlite
+sentence-transformers
+python-dotenv
+websockets
+pytest
+httpx

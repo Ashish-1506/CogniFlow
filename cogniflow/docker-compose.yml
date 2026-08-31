@@ -1,0 +1,40 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./backend/.env.example
+    volumes:
+      - ./chroma_data:/app/chroma_db
+      - ./sqlite_data:/app/conversations.db
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    networks:
+      - cogniflow-net
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        VITE_WS_URL: ws://localhost:8000/ws/chat
+    ports:
+      - "3000:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    networks:
+      - cogniflow-net
+
+networks:
+  cogniflow-net:
+    driver: bridge
