@@ -119,7 +119,7 @@ cogniflow/
 ### Docker Compose
 
 ```powershell
-git clone https://github.com/Ashish-Ranjan/CogniFlow.git
+git clone https://github.com/Ashish-1506/CogniFlow.git
 cd CogniFlow/cogniflow
 Copy-Item backend/.env.example backend/.env
 docker compose up --build -d
