@@ -9,6 +9,10 @@ CogniFlow is a stateful enterprise AI assistant that moves beyond static documen
 [![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
 [![LangSmith](https://img.shields.io/badge/LangSmith-observability-1C3C3C)](https://smith.langchain.com/)
 
+<p align="center">
+  <img src="docs/assets/dashboard.png" alt="CogniFlow Dashboard Interface" width="100%">
+</p>
+
 ## Why CogniFlow
 
 Traditional RAG behaves like a search engine over a static corpus: retrieve a chunk, then generate an answer. CogniFlow treats the request as a durable execution problem. The agent plans a sequence, gathers fresh evidence through MCP connectors, incorporates both session history and semantic user facts, recovers from connector failures, and exposes the execution trace while work is in progress.
