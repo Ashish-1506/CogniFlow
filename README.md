@@ -10,7 +10,7 @@ CogniFlow is a stateful enterprise AI assistant that moves beyond static documen
 [![LangSmith](https://img.shields.io/badge/LangSmith-observability-1C3C3C)](https://smith.langchain.com/)
 
 <p align="center">
-  <img src="docs/assets/dashboard.png" alt="CogniFlow Dashboard Interface" width="100%">
+  <img src="./assets/dashboard.png" alt="CogniFlow Dashboard Interface" width="100%">
 </p>
 
 ## Why CogniFlow
